@@ -72,6 +72,8 @@ import picsart from '../assets/svg/skills/picsart.svg'
 import sketch from '../assets/svg/skills/sketch.svg'
 import unity from '../assets/svg/skills/unity.svg'
 import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
+import spring_boot from '../assets/svg/skills/spring-boot.svg'
+import net_core from '../assets/svg/skills/NET_Core.svg'
 
 import canva from '../assets/svg/skills/canva.svg'
 
@@ -79,6 +81,10 @@ import canva from '../assets/svg/skills/canva.svg'
 export const skillsImage = (skill) => {
     const skillID = skill.toLowerCase();
     switch (skillID) {
+        case 'spring-boot':
+            return spring_boot;
+        case 'net-core':
+            return net_core;
         case 'gcp':
             return gcp;
         case 'html':

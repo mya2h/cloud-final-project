@@ -1,9 +1,9 @@
 import resume from '../assets/pdf/resume.pdf'
 
 export const headerData = {
-    name: 'Jane Doe',
-    title: "Web Developer",
-    desciption:"There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
-    image: 'https://raw.githubusercontent.com/PhantomScript/asset-container/main/developer-portfolio/landingImg.png',
+    name: 'Beamlak Mekonnen',
+    title: "Software Engineer",
+    desciption:"Skilled engineer with 4+ years of intensive experience using architectural design patterns, industry best standards, and modern SDLC methodologies to design, develop, and maintain a variety of high-quality software solutions using Java, C#, AWS, SQL/NO SQL, Spring and .NET Core. Solid history of investigating performance bottlenecks and technical issues, and providing resolutions which markedly increase user engagement and company revenue.",
+    image: 'https://mynewbucketttttt.s3.amazonaws.com/photo_2021-02-09_12-43-033.jpg',
     resumePdf: resume
 }
