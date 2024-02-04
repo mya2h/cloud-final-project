@@ -1,7 +1,7 @@
 export const contactsData = {
-    email: 'beamlakmekonnen@aol.com',
-    phone: '+16507891499',
-    address: 'Austin, Texas, United States',
+    email: 'kalkidancherinet21@gmail.com',
+    phone: '+16412339777',
+    address: 'Charlotte, NC',
 
-    sheetAPI: ''
+    sheetAPI: 'https://ybl0ryvfii.execute-api.us-east-1.amazonaws.com/1/comment'
 }

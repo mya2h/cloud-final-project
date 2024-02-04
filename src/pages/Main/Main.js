@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import { Navbar, Footer, Landing, About, Skills, Testimonials, Blog, Education, Experience, Contacts, Projects, Services, Achievement } from '../../components'
 import { headerData } from '../../data/headerData'
+import ActiveTimeTracker from './ActiveTimeTracker'
 
 function Main() {
     return (
@@ -18,12 +19,13 @@ function Main() {
             <Experience />
             <Education />
             <Projects />
-            <Achievement />
+            {/* <Achievement /> */}
             <Services />
             {/* <Testimonials /> */}
-            <Blog />
+            {/* <Blog /> */}
             <Contacts />
             <Footer />
+            <ActiveTimeTracker />
         </div>
     )
 }

@@ -30,9 +30,8 @@ import './Contacts.css';
 function Contacts() {
     const [open, setOpen] = useState(false);
 
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [text, setText] = useState('');
 
     const [success, setSuccess] = useState(false);
     const [errMsg, setErrMsg] = useState('');
@@ -129,26 +128,28 @@ function Contacts() {
 
     const classes = useStyles();
 
-    const handleContactForm = (e) => {
+    const handleContactForm = async (e) => {
         e.preventDefault();
 
-        if (name && email && message) {
+        if ( email && text) {
             if (isEmail(email)) {
                 const responseData = {
-                    name: name,
                     email: email,
-                    message: message,
+                    text: text,
                 };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                const response = await axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                    console.log(res.status);
                     console.log('success');
                     setSuccess(true);
-                    setErrMsg('');
-
-                    setName('');
+                    setErrMsg('Success!!');
                     setEmail('');
-                    setMessage('');
-                    setOpen(false);
+                    setText('');
+                    setOpen(true);
+                }).catch(function(error){
+                    console.log(error);
+                    setErrMsg();
+                    setOpen(true);
                 });
             } else {
                 setErrMsg('Invalid email');
@@ -172,19 +173,6 @@ function Contacts() {
                     <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>
-                                <label htmlFor='Name' className={classes.label}>
-                                    Name
-                                </label>
-                                <input
-                                    placeholder='John Doe'
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                    type='text'
-                                    name='Name'
-                                    className={`form-input ${classes.input}`}
-                                />
-                            </div>
-                            <div className='input-container'>
                                 <label
                                     htmlFor='Email'
                                     className={classes.label}
@@ -202,17 +190,17 @@ function Contacts() {
                             </div>
                             <div className='input-container'>
                                 <label
-                                    htmlFor='Message'
+                                    htmlFor='text'
                                     className={classes.label}
                                 >
                                     Message
                                 </label>
                                 <textarea
                                     placeholder='Type your message....'
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
+                                    value={text}
+                                    onChange={(e) => setText(e.target.value)}
                                     type='text'
-                                    name='Message'
+                                    name='text'
                                     className={`form-message ${classes.message}`}
                                 />
                             </div>
