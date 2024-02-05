@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Navbar, Footer, Landing, About, Skills, Testimonials, Blog, Education, Experience, Contacts, Projects, Services, Achievement } from '../../components'
+import { Navbar, Footer, Landing, About, Skills, Education, Experience, Contacts, Projects } from '../../components'
 import { headerData } from '../../data/headerData'
 import ActiveTimeTracker from './ActiveTimeTracker'
 
@@ -19,10 +19,6 @@ function Main() {
             <Experience />
             <Education />
             <Projects />
-            {/* <Achievement /> */}
-            <Services />
-            {/* <Testimonials /> */}
-            {/* <Blog /> */}
             <Contacts />
             <Footer />
             <ActiveTimeTracker />
